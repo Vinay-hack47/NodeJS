@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>File Upload</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <h1>Upload a File</h1>
+
+  <form id="uploadForm" action="/api/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" id="myFile" name="myFile" required />
+
+    <div class="info-box">
+      Allowed types: <strong>.jpg, .png, .pdf, .txt, .zip</strong> (Max: <strong>5MB</strong>)
+    </div>
+
+    <button type="submit">Upload</button>
+    <p id="errorMessage" class="error"></p>
+  </form>
+
+  <hr>
+
+  <h2>Uploaded Files</h2>
+  <ul id="fileList"></ul>
+
+  <hr>
+  <h2>Trending JavaScript Projects on GitHub</h2>
+  <ul id="trendingList"></ul>
+
+  <script src="/js/main.js"></script>
+</body>
+
+</html>
